@@ -1,0 +1,42 @@
+@use "../../utilities" as u;
+
+.bl_media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: calc(u.rem(1280) - u.rem(96)); //左右余白48pxを差し引いている
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+
+  @include u.mq("md") {
+    flex-direction: row;
+  }
+}
+.bl_media_img {
+  width: 100%;
+
+  @include u.mq("md") {
+    flex: 0 0 39%;
+    order: 1;
+  }
+}
+.bl_media_img.bl_media_img__v2 {
+  flex-basis: u.rem(191);
+  width: u.rem(191);
+  align-self: baseline;
+  @include u.mq("md") {
+    align-self: center;
+  }
+}
+.bl_media_body {
+  flex: 0 0 58%;
+}
+.bl_media_body.bl_media_body__v2 {
+  flex-basis: calc(568 / 880 * 100%);
+  margin-right: calc((880 - 824) / 880 * 100%);
+  @include u.mq("md") {
+    margin-right: 0;
+  }
+}

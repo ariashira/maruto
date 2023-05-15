@@ -1,0 +1,210 @@
+@use "../../utilities" as u;
+
+//base.scss で全要素に対して(*{~})フォント系をinheritにしておく必要あり
+//inherit にしないと、inputやtextareaは継承しない
+
+.el_btn_wrapper {
+  color: u.$colorTheme;
+  text-align: center;
+  padding-top: u.rem(8);
+
+  @include u.mq("md") {
+    padding-top: u.rem(38);
+  }
+}
+
+.el_btn {
+  display: inline-block;
+  position: relative;
+  width: u.rem(180);
+  max-width: 100%;
+  padding: u.rem(12);
+  background-color: transparent;
+  border: u.rem(1) solid u.$colorTheme;
+  border-radius: u.rem(0);
+  // box-shadow: 0 0 u.rem(10) rgba(51, 51, 51, 0.25); //うっすら影
+  color: u.$colorTheme;
+  font-family: u.$fontBase; //input要素のボタンの場合、ffをinheritしないので指定しておく
+  font-size: u.rem(16);
+  line-height: 1.5;
+  letter-spacing: 0em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor: pointer;
+
+  @include u.mq("md") {
+    width: u.rem(240);
+    font-size: u.rem(16);
+    padding: u.rem(12);
+  }
+}
+// Theme色に塗りつぶす場合につける
+.el_btn.el_btn__filled {
+  background-color: u.$colorTheme;
+  color: #fff;
+}
+// 背景色と同色の塗りつぶしボタンの場合にボーダーを白くする
+.el_btn.el_btn__whiteBorder {
+  border-color: #fff;
+}
+// ボタン右端にアイコンをつける
+.el_btn.el_btn__icon {
+  position: relative;
+}
+.el_btn.el_btn__icon::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/img/common/icon_listArrow__white.svg");
+  background-repeat: no-repeat;
+  width: u.rem(20);
+  height: u.rem(20);
+  right: u.rem(18);
+}
+
+.el_btn.el_btn__icon:hover:after {
+  background-image: url("../../assets/img/common/icon_listArrow.svg");
+}
+// 角が丸いボタン
+.el_btn.el_btn__round {
+  margin-top: u.rem(3);
+  // padding: u.rem(8) u.rem(36);
+  border-radius: u.rem(999);
+
+  // @include u.mq('lg') {
+  //   font-size: u.rem(14);
+  // }
+}
+.el_btn.el_btn__sm {
+  width: auto;
+}
+
+.el_btn.el_btn__lg {
+  width: u.rem(300);
+  font-size: u.rem(20);
+  font-weight: normal;
+}
+
+//長いテキストが入っているボタンは画面幅によっては
+//ボタン幅がテキスト幅に足りなくなるため、幅方向のpaddingを%指定にする
+.el_btn.el_btn__longTxt {
+  @include u.mq("lg") {
+    padding: u.rem(13) 6% u.rem(14);
+  }
+  @include u.mq("md") {
+    //md以下の画面幅で.el_btnの標準と同じpaddingにする
+    padding: u.rem(10) u.rem(20) u.rem(11);
+  }
+}
+
+.el_btn:focus,
+.el_btn:hover {
+  background-color: u.$colorTheme;
+  color: #fff;
+  opacity: 1;
+}
+.el_btn.el_btn__filled:focus,
+.el_btn.el_btn__filled:hover {
+  background-color: #fff;
+  color: u.$colorTheme;
+}
+
+.el_btn__offsetBorder {
+  border: none; //標準ボタンのボーダーを打ち消す
+  left: u.rem(5);
+}
+//ドロワーメニュー内での表示はオフセット無し
+.bl_nav_link.el_btn__offsetBorder {
+  @include u.mq("md") {
+    left: 0;
+  }
+}
+
+//ずらしたボーダー
+.el_btn__offsetBorder::after {
+  content: "";
+  display: inline-block;
+  border: u.rem(1) solid u.$colorTheme;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: u.rem(-5);
+  left: u.rem(-5);
+  transition: 0.2s;
+}
+.el_btn__offsetBorder.el_btn__round::after {
+  border-radius: u.rem(999);
+}
+.el_btn__offsetBorder.el_btn__offsetBorder__white::after {
+  border-color: #fff;
+}
+.el_btn__offsetBorder.el_btn__offsetBorder__accent::after {
+  border-color: u.$colorTheme;
+}
+
+//ホバー時、枠線とボタン本体の位置を入れ替え
+.el_btn__offsetBorder:hover,
+.el_btn__offsetBorder:focus {
+  transform: translate(u.rem(-1), u.rem(-1));
+}
+
+.el_btn__offsetBorder:hover::after,
+.el_btn__offsetBorder:focus::after {
+  transform: translate(u.rem(5), u.rem(5));
+}
+//ドロワーメニュー内での表示はホバーアクション無し
+.bl_nav_link.el_btn__offsetBorder:hover,
+.bl_nav_link.el_btn__offsetBorder:focus {
+  @include u.mq("md") {
+    transform: none;
+  }
+}
+
+//クリック時、右下に移動
+.el_btn__offsetBorder:active {
+  transform: translate(u.rem(3), u.rem(3));
+}
+
+.el_btnWrapper {
+  text-align: center;
+}
+
+//スマホ時中央寄せ、幅100%
+.el_btnWrapper__w100Sm {
+  @include u.mq("sm") {
+    text-align-last: center;
+  }
+}
+.el_btnWrapper__w100Sm > .el_btn {
+  @include u.mq("sm") {
+    width: 100%;
+  }
+}
+
+.el_btnWrapper.el_btnWrapper__2cols {
+  @include u.mq("sm") {
+    display: flex; //縦並びにするためにFlexにする
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.el_btnWrapper.el_btnWrapper__2cols > .el_btn {
+  margin-right: 15%;
+
+  @include u.mq("sm") {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.el_btnWrapper.el_btnWrapper__2cols > .el_btn:last-child {
+  margin-right: 0;
+
+  @include u.mq("sm") {
+    margin-right: auto;
+    margin-top: u.rem(30);
+  }
+}

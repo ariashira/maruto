@@ -1,0 +1,50 @@
+@use '../../utilities' as u;
+
+.bl_MV_subpages {
+  position: relative;
+  background-image: url("../../assets/img/MV_subpages.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 10.9vw;
+  padding-bottom: 7.1vw;
+}
+
+.bl_faq {
+  padding-bottom: u.rem(100);
+}
+.bl_faq_q,
+.bl_faq_a {
+  display: flex;
+  align-items: center;
+  gap: u.rem(32);
+  font-size: u.rem(16);
+  line-height: calc(33/24);
+  @include u.mq('md') {
+    font-size: u.rem(20);
+    gap: u.rem(12);
+  }
+}
+.bl_faq_a {
+  font-weight: 400;
+}
+.bl_faq_q figure,
+.bl_faq_a figure {
+  flex-shrink: 0;
+  width: u.rem(40);
+  height: u.rem(71);
+  @include u.mq('md') {
+    height: u.rem(60);
+  }
+}
+
+.bl_faq_q img,
+.bl_faq_a img {
+  width: auto;
+  height: 100%;
+}
+.bl_faq_item {
+  border-bottom: u.rem(1) solid #ddd;
+  padding-top: u.rem(20);
+  padding-bottom: 24px;
+}

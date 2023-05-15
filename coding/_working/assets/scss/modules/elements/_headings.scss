@@ -1,0 +1,92 @@
+@use "../../utilities" as u;
+
+.el_lv1Heading_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem(50);
+  color: #fff;
+}
+.el_lv1Heading {
+  display: block;
+  font-size: 10vw;
+  line-height: calc(100 / 90);
+  font-weight: bold;
+  padding-top: u.rem(13);
+  @include u.mq("md") {
+    // font-size: u.rem(50);
+    font-size: 5vw;
+  }
+  @include u.mq("lg") {
+  }
+}
+.el_lv1Heading_shoulder {
+  display: block;
+  font-size: u.rem(18);
+  line-height: 1;
+  @include u.mq("md") {
+    font-size: u.rem(21);
+  }
+  @include u.mq("lg") {
+    font-size: u.rem(25);
+  }
+}
+
+.el_lv2Heading_wrapper {
+  padding-bottom: u.rem(30);
+}
+.el_lv2Heading {
+  position: relative;
+  font-family: inherit;
+  font-size: u.rem(30);
+  line-height: 1;
+  font-weight: bold;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: capitalize;
+  padding-left: u.rem(30);
+
+  @include u.mq("md") {
+    font-size: u.rem(50);
+    padding-left: u.rem(50);
+  }
+}
+.el_lv2Heading::first-letter {
+  color: u.$colorTheme;
+}
+.el_lv2Heading::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/img/common/icon_listArrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: u.rem(20);
+  height: u.rem(20);
+  left: 0;
+  bottom: u.rem(3);
+
+  @include u.mq("md") {
+    width: u.rem(30);
+    height: u.rem(30);
+    bottom: u.rem(6);
+  }
+}
+.el_lv2Heading.el_lv2Heading__noDeco {
+  display: inline-block; // inline要素だとfirst-letterが効かない模様なのでつける
+  padding-left: 0;
+}
+.el_lv2Heading.el_lv2Heading__noDeco::before {
+  content: none;
+}
+.el_lv2Heading_jp {
+  position: absolute;
+  font-size: u.rem(15);
+  font-weight: normal;
+  padding-left: u.rem(15);
+  bottom: u.rem(1);
+
+  @include u.mq("md") {
+    font-size: u.rem(20);
+    padding-left: u.rem(30);
+    bottom: u.rem(3);
+  }
+}

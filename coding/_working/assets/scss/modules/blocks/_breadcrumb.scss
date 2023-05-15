@@ -1,0 +1,47 @@
+@use "../../utilities" as u;
+
+.bl_breadcrumb {
+  margin: 0;
+  padding-top: u.rem(10);
+  padding-bottom: u.rem(0);
+  list-style: none;
+
+  @include u.mq("md") {
+    padding-top: u.rem(36);
+    padding-bottom: u.rem(40);
+  }
+}
+
+.bl_breadcrumb li {
+  display: inline;
+  list-style: none;
+  font-weight: normal;
+  font-size: u.rem(12);
+  color: #000;
+
+  @include u.mq("md") {
+    font-size: u.rem(14);
+  }
+}
+.bl_breadcrumb li:last-child {
+  color: #808080;
+}
+
+.bl_breadcrumb li:after {
+  /* >を表示*/
+  content: ">";
+  padding: 0 0.2em;
+  color: inherit;
+}
+
+.bl_breadcrumb li:last-child:after {
+  content: "";
+}
+
+.bl_breadcrumb li a {
+  text-decoration: none;
+}
+
+.bl_breadcrumb li a:hover {
+  text-decoration: underline;
+}

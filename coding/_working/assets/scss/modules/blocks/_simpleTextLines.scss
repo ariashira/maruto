@@ -1,0 +1,10 @@
+@use "../../utilities" as u;
+
+.bl_simpleTextLines {
+  color: #fff;
+  background-color: #676464;
+  padding: u.rem(12) calc(50/1280 * 100%);
+}
+.bl_simpleTextLines_line > span {
+  padding-left: u.rem(32);
+}

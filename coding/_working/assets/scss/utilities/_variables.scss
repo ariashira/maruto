@@ -1,0 +1,17 @@
+@use "functions" as u;
+//検索用文字列：vari variables variable
+
+// $colorBase:#fffbf2;
+$colorBaseFont: #000;
+$colorWhite: #fff;
+$colorTheme: #1d2087;
+$colorAccent: #3e4962;
+
+$fontBase: "Noto Sans JP", "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック",
+  YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+$headerHeight: u.rem(100); //ヘッダ高さ
+$headerHeight__md: u.rem(60); //スマホ時ヘッダ高さ
+$headerNarrowHeight: auto; //スクロール時ヘッダ高さ
+// $maxWidth: u.rem(1280);
+$contWidth: u.rem(1080);

@@ -1,0 +1,34 @@
+- const pathImgMV = "./assets/img/home/"
+
+-
+  const mvItems = [
+    {
+      src: pathImgMV + "MV1.jpg",
+      alt: "",
+    },
+    {
+      src: pathImgMV + "MV2.jpg",
+      alt: "",
+    },
+    {
+      src: pathImgMV + "MV3.jpg",
+      alt: "",
+    },
+  ];
+
+.bl_MV.js_swiper_MV.bl_MV_heading_wrapper
+  .swiper-wrapper
+    each item in mvItems
+      .swiper-slide
+        img(src=item.src, alt="")
+  .bl_MV_heading
+    h1.el_lv1Heading_wrapper
+      span.el_lv1Heading The best
+        br.mdDown_only
+        | consultant
+        br
+        | for clients.
+      span.el_lv1Heading_shoulder 顧客の良き相談相手
+  //- .swiper-pagination
+  //- .swiper-button-prev
+  //- .swiper-button-next

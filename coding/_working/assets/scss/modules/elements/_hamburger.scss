@@ -1,0 +1,78 @@
+@use "../../utilities" as u;
+
+.el_hamburger {
+  height: 100%;
+}
+
+.el_hamburger_btn {
+  display: flex;
+  position: fixed;
+  background-color: transparent;
+  border-radius: u.rem(4);
+  height: u.rem(32);
+  width: u.rem(36);
+  top: u.rem(10);
+  right: u.rem(10);
+  justify-content: center;
+  align-items: center;
+  margin-top: u.rem(-2);
+  cursor: pointer;
+  z-index: 90;
+
+  @include u.mq("lg") {
+    display: none;
+  }
+}
+.el_hamburger_btn::after {
+  position: absolute;
+  content: "menu";
+  font-size: u.rem(12);
+  color: u.$colorTheme;
+  bottom: u.rem(-12);
+}
+
+.el_hamburger_btn span,
+.el_hamburger_btn span:before,
+.el_hamburger_btn span:after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: u.rem(2);
+  width: u.rem(33);
+  border-radius: u.rem(3);
+  background-color: u.$colorTheme;
+}
+
+.el_hamburger_btn span:before {
+  bottom: u.rem(8);
+  transition: all 0.3s;
+}
+.el_hamburger_btn span:after {
+  top: u.rem(8);
+  transition: all 0.3s;
+}
+// チェックボックスは常時隠す
+#hamburger_checkBox {
+  display: none;
+}
+// menuの文字を消す
+#hamburger_checkBox:checked ~ .el_hamburger_btn::after {
+  opacity: 0;
+}
+#hamburger_checkBox:checked ~ .el_hamburger_btn span {
+  background-color: transparent; // 透明にして消す
+
+  &::before {
+    bottom: 0;
+    background-color: #fff; // 白くする
+    transform: rotate(45deg);
+    transition: all 0.3s;
+  }
+
+  &::after {
+    top: 0;
+    background-color: #fff; // 白くする
+    transform: rotate(-45deg);
+    transition: all 0.3s;
+  }
+}

@@ -1,0 +1,13 @@
+@function rem($pxValue) {
+  @return $pxValue * 0.1rem;
+}
+
+@function ratio($numerator, $denominator) {
+  @return calc($numerator / $denominator * 100%);
+}
+
+@function remove-sharp($color) {
+  $len: str-length($string: $color);
+  $result: str-slice($color, 2, $len - 1);
+  @return $result;
+}

@@ -1,0 +1,78 @@
+@use "../../utilities" as u;
+
+.bl_accordion {
+  padding-top: u.rem(0);
+}
+// .bl_accordion_item + .bl_accordion_item { // 2つ目以降に適用
+//   margin-top: u.rem(25);
+// }
+
+.bl_accordion_item {
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.bl_accordion_item.is_active {
+  padding-bottom: u.rem(20);
+}
+
+.bl_accordion_btn_wrapper {
+  padding-top: u.rem(8);
+  padding-bottom: u.rem(8);
+  border-bottom: 1px solid #999;
+}
+
+.bl_accordion_btn {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding-right: u.rem(50); // 右端の開閉ボタン（＋ーや矢印）分の余白
+  padding-left: 0;
+  background-color: transparent;
+  border: none; // button要素のデフォルトのボーダーを削除
+  font-size: u.rem(18);
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+// ＋ーマーク
+.bl_accordion_btn::before,
+.bl_accordion_btn::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  height: u.rem(3);
+  width: u.rem(24);
+  background-color: u.$colorTheme;
+  right: u.rem(15);
+  top: 50%;
+  transition: 0.3s;
+}
+.bl_accordion_btn::after {
+  transform: rotate(90deg);
+}
+.bl_accordion_btn.is_active::after {
+  transform: rotate(0deg);
+}
+
+// .bl_accordion_btn:focus,
+// .bl_accordion_btn:hover {
+//   color: u.$colorTheme;
+// }
+
+.bl_accordion_body {
+  display: none;
+  background-color: transparent;
+  // padding: u.rem(15);
+  border: none;
+}
+
+.bl_accordion_body.is_active {
+  display: block;
+}
+.bl_accordion_body > *:last-child {
+  margin-bottom: 0;
+}

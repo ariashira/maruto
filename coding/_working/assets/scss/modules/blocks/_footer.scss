@@ -1,0 +1,41 @@
+@use "../../utilities" as u;
+
+.bl_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: u.rem(120);
+  color: #fff;
+  background-color: u.$colorAccent;
+
+  @include u.mq("md") {
+    height: u.rem(250);
+  }
+}
+.bl_footer_nav {
+  font-size: u.rem(12);
+  text-align: center;
+  width: auto;
+
+  @include u.mq("md") {
+    font-size: u.rem(14);
+  }
+}
+.bl_footer_nav_link {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+}
+.bl_footer_nav_link::before {
+  position: absolute;
+  content: "|";
+  color: #fff;
+  height: auto;
+  width: auto;
+  left: u.rem(-10);
+}
+.bl_footer_nav_link:first-child:before {
+  content: none;
+}

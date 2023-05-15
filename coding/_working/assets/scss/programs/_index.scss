@@ -1,0 +1,48 @@
+@use "../utilities" as u;
+
+.js_swiper_MV {
+  position: relative;
+}
+// swiperのnext/prevボタン
+// .js_swiper_MV .swiper-button-next:after,
+// .js_swiper_MV .swiper-button-prev:after {
+//   color: #fff;
+//   padding: u.rem(8);
+//   font-size: 24px;
+//   border-radius: 999px;
+//   background-color: rgba(245,223,153, 0.3);
+// }
+
+/* フェードインのベース */
+.js_fadeIn {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.js_fadeIn__delay5 {
+  transition: all 1s 0.5s ease-out; //表示を遅らせる
+}
+
+.js_fadeIn__delay10 {
+  transition: all 1s 1s ease-out; //表示を遅らせる
+}
+
+/* 上からフェードイン */
+.js_fadeIn__top {
+  transform: translate(0, -20px);
+}
+
+/* 下からフェードイン */
+.js_fadeIn__bottom {
+  transform: translate(0, 20px);
+}
+
+/* 左からフェードイン */
+.js_fadeIn__left {
+  transform: translate(-20px, 0);
+}
+
+/* 右からフェードイン */
+.js_fadeIn__right {
+  transform: translate(20px, 0);
+}

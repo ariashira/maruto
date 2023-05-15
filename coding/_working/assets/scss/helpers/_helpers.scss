@@ -1,0 +1,77 @@
+// 検索用 helpers
+@use "../utilities" as u;
+
+//lgサイズ以上のみ表示
+.lgUp_only {
+  display: none !important;
+  @include u.mq("lg") {
+    display: block !important;
+  }
+}
+//mdサイズ以上のみ表示
+.mdUp_only {
+  display: none !important;
+  @include u.mq("md") {
+    display: block !important;
+  }
+}
+//mdサイズ以下のみ表示
+.mdDown_only {
+  display: block !important;
+  @include u.mq("md") {
+    display: none !important;
+  }
+}
+//smサイズ以下のみ表示
+.sm_only {
+  display: block !important;
+  @include u.mq("sm") {
+    display: none !important;
+  }
+}
+
+.hp_centerTxt {
+  text-align: center !important;
+}
+
+.hp_zIndex__20 {
+  z-index: 20 !important;
+}
+.hp_zIndex__21 {
+  z-index: 21 !important;
+}
+.hp_zIndex__30 {
+  z-index: 30 !important;
+}
+.hp_zIndex__31 {
+  z-index: 31 !important;
+}
+.hp_pos__rel {
+  position: relative !important;
+}
+
+//span要素にこのクラスを付けて改行位置を操作
+.hp_lineFeed {
+  display: inline-block !important;
+}
+
+.hp_colWhite {
+  color: #fff !important;
+}
+.hp_colTheme {
+  color: u.$colorTheme !important;
+}
+.hp_flex__1 {
+  flex: 1 !important;
+}
+
+.hp_mt54 {
+  margin-top: u.rem(54) !important;
+  @include u.mq("md") {
+    margin-top: u.rem(40) !important;
+  }
+}
+
+.hp_hide {
+  display: none !important;
+}

@@ -1,0 +1,17 @@
+@use "./utilities/index.scss" as u;
+
+.el_logo_wrapper {
+  display: flex;
+  align-items: center;
+  width: u.rem(230);
+  height: 100%;
+
+  @include u.mq("md") {
+    width: u.rem(300);
+  }
+}
+.el_logo {
+}
+.el_logo > img {
+  object-fit: contain;
+}

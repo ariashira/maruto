@@ -1,0 +1,26 @@
+@use "../../utilities" as u;
+
+.bl_bgShape {
+  position: relative;
+}
+
+.bl_bgShape::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(75% 0, 0 0, 0 100%);
+  background-color: #ecedef;
+  z-index: -1;
+
+  @include u.mq("md") {
+    clip-path: polygon(44% 0, 0 0, 0 100%);
+  }
+}
+.bl_bgShape.bl_bgShape__v2::before {
+  clip-path: polygon(50% 0, 0 0, 0 100%);
+
+  @include u.mq("md") {
+    clip-path: polygon(35% 0, 0 0, 0 100%);
+  }
+}

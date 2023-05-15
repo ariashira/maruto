@@ -1,0 +1,37 @@
+@use "../../utilities" as u;
+
+//ヘッダナビメニューに下線
+//中央から線が伸びるアニメーション
+.bl_underlineAnimation {
+  position: relative;
+}
+.bl_underlineAnimation:hover,
+.bl_underlineAnimation:active,
+.bl_underlineAnimation:focus-visible {
+  opacity: 1; // aタグに付いているホバー時半透明化を打ち消し
+}
+
+.bl_underlineAnimation::after {
+  //ドロワー表示時は下線無し
+  content: none;
+
+  @include u.mq("md") {
+    position: absolute;
+    content: "";
+    border-bottom: solid u.rem(3) u.$colorTheme;
+    width: 0; //幅0で非表示にしておく
+    bottom: u.rem(0);
+    left: 50%; //中央寄せ
+    transform: translateX(-50%); //中央寄せ
+    transition: all 0.3s;
+  }
+}
+
+.bl_underlineAnimation {
+  &:hover::after,
+  &:active::after,
+  &:focus-visible::after {
+    width: 100%; //ホバー時に幅を広げて表示させる
+  }
+}
+

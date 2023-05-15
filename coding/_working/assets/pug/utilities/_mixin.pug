@@ -1,0 +1,173 @@
+//- 検索用　variables
+- const rootPath = '';
+-
+  const navItems1 = [
+    {
+      name: "会社情報",
+      en: "Company",
+      url: "#",
+      type: "",
+    },
+    {
+      name: "製品情報",
+      en: "Products",
+      url: "./page-products.html",
+      type: "",
+    },
+    {
+      name: "お知らせ",
+      en: "News",
+      url: "#",
+      type: "",
+    },
+  ];
+-
+  const navItems2 = [
+    {
+      name: "お問い合わせ",
+      en: "Contact",
+      url: "#",
+      type: "contact", // 色を変えるための情報
+    },
+    {
+      name: "採用情報",
+      en: "Recruit",
+      url: "#",
+      type: "recruit", // 色を変えるための情報
+    },
+  ];
+- const og_site_name = '株式会社丸東製作所';
+- const url_root_absolute = '';  // 末尾にスラッシュを入れるのを忘れずに
+- const og_img_url = url_root_absolute + 'og_img.jpg';
+
+//- **************************************
+//- metaデータからファビコンまで
+//- **************************************
+//- 引数(わかりにくいもののみ解説)
+//-   path ルートから見た当該htmlファイルのパス
+//-   isHome ホームか下層か
+//-   fullPath ドメインを除いたページのフルパス 先頭のスラッシュは不要
+mixin metaInfo(pageTitle, descr, path = "./", isHome = false, fullPath)
+  //- meta(name="robots" content="noindex")
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title #{pageTitle}
+  meta(name="description" content=descr)
+  meta(name="keywords" content="")
+  meta(property="og:title" content=pageTitle)
+  meta(property="og:description" content=descr)
+  meta(property="og:image" content=og_img_url)
+  meta(property="og:image:width" content="1200")
+  meta(property="og:image:height" content="630")
+  meta(property="og:locale" content="ja_JP")
+  if (isHome)
+    meta(property="og:url" content=url_root_absolute)
+    meta(property="og:type" content="website")
+  else
+    meta(property="og:url" content=url_root_absolute + fullPath)
+    meta(property="og:type" content="article")
+  meta(property="og:site_name" content=og_site_name)
+  meta(name="twitter:card" content="summary_large_image")
+  meta(name="twitter:title" content=pageTitle)
+  meta(name="twitter:description" content=descr)
+  meta(name="twitter:image" content=og_img_url)
+  |
+  |
+  //ファビコン
+  link(rel="icon", href=path+"assets/img/favicon.ico" type="image/x-icon")
+  link(rel="apple-touch-icon", href=path+"assets/img/apple-touch-icon-180x180.png")
+
+
+//- **************************************
+//- Googleフォント
+//- **************************************
+- const googleFontsLink = "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap";
+mixin googleFonts
+  |
+  |
+  // google fonts
+  link(rel="preconnect" href="https://fonts.googleapis.com")
+  link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+  link(rel="stylesheet", href=googleFontsLink)
+
+
+//- **************************************
+//- ヘッダー
+//- **************************************
+- const pathImgHeader = "./assets/img/common/"
+mixin header(path = './')
+  // ヘッダー
+  header.ly_header_spacer
+    .ly_header.ly_header__fixed.hp_zIndex__30
+      .bl_header_overlay.hp_zIndex__20
+      .bl_header.bl_header__shadow
+        // ヘッダーロゴ
+        .el_logo_wrapper
+          |
+          |
+          a.el_logo(href=path)
+            img(src=pathImgHeader + "logo.svg" alt="株式会社丸東製作所")
+        // ヘッダーナビ
+        .bl_header_navWrapper
+          .el_hamburger
+            input(type="checkbox" id="hamburger_checkBox")
+            label.el_hamburger_btn.hp_zIndex__30(for="hamburger_checkBox"): span: span
+            label.bl_nav_drawerOverlay.hp_zIndex__20(for="hamburger_checkBox")
+            +nav(true, path)
+
+//- animationは下線の有無（ヘッダナビはホバーで下線表示）
+mixin nav(path = './')
+  nav.bl_nav.hp_zIndex__21
+    // 3つのナビグループを囲うラッパー
+    .bl_nav_itemGroups
+      // メインのナビゲーション
+      ul.bl_nav_itemsWrapper
+        each item in navItems1 ? navItems1:[]
+          li.bl_nav_item
+            a.bl_nav_link.js_nav_link.bl_underlineAnimation(href=item.url)
+              span.bl_nav_link_text #{item.name}
+              span.bl_nav_link_text.bl_nav_link_text__en.lgUp_only #{item.en}
+      // CTAのボタン2つ
+      ul.bl_nav_itemsWrapper.bl_nav_itemsWrapper__cta
+        li.bl_nav_item.bl_nav_item__accent
+          a.bl_nav_link.js_nav_link(href=navItems2[0].url)
+            span.bl_nav_link_text #{navItems2[0].name}
+            span.bl_nav_link_text.bl_nav_link_text__en.lgUp_only #{navItems2[0].en}
+        li.bl_nav_item.bl_nav_item__theme
+          a.bl_nav_link.js_nav_link(href=navItems2[1].url)
+            span.bl_nav_link_text #{navItems2[1].name}
+            span.bl_nav_link_text.bl_nav_link_text__en.lgUp_only #{navItems2[1].en}
+      // SNSアイコン2つ
+      ul.bl_nav_itemsWrapper.bl_nav_itemsWrapper__sns
+        li.bl_nav_item
+          a.bl_nav_link.bl_nav_link__sns.js_nav_link(href="#")
+            picture
+              source(media="(min-width: 992px)", srcset=pathImgHeader + "icon_twitter.svg")
+              img(src=pathImgHeader + "icon_twitter__white.svg" alt="twitter")
+        li.bl_nav_item
+          a.bl_nav_link.bl_nav_link__sns.js_nav_link(href="#")
+            picture
+              source(media="(min-width: 992px)", srcset=pathImgHeader + "icon_facebook.svg")
+              img(src=pathImgHeader + "icon_facebook__white.svg" alt="facebook")
+
+
+//- **************************************
+//- セクション見出し
+//- **************************************
+mixin sectionHeading(heading, heading_english, alt)
+  .el_lv2Heading_wrapper.js_fadeIn.js_fadeIn__bottom
+    figure.el_lv2Heading_eng
+      img(src=pathTextImg + heading_english, alt=alt)
+    h2.el_lv2Heading !{heading}
+
+//- **************************************
+//- フッター
+//- **************************************
+mixin footer(path = "./")
+  footer.bl_footer.ly_center
+    nav.bl_footer_nav
+      a.bl_footer_nav_link(href="#") プライバシーポリシー
+      a.bl_footer_nav_link(href="#") お問い合わせ
+      a.bl_footer_nav_link(href="#") サイトマップ
+    .el_copyright Copyright © 2022 MARUTO Testing Machine Company. All rights reserved.

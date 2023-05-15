@@ -1,0 +1,14 @@
+@use "../../utilities" as u;
+
+.el_copyright {
+  color: #fff;
+  font-size: u.rem(12);
+  line-height: 1.5;
+  text-align: center;
+  padding: u.rem(20) 0 0;
+  background-color: u.$colorAccent;
+
+  @include u.mq("md") {
+    font-size: u.rem(14);
+  }
+}

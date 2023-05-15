@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile /home/xs174602/resonance-harmony.com/public_html/test-maruto.resonance-harmony.com/.htpasswd
+Require valid-user

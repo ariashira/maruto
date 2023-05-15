@@ -1,0 +1,72 @@
+@use "../../utilities" as u;
+
+.bl_table2cols {
+  width: 100%;
+  font-size: u.rem(16);
+  margin-top: 0;
+
+  @include u.mq("md") {
+    border-collapse: separate; // セル間に余白をつけるのに必要
+    border-spacing: u.rem(5) 0; // セル間の余白
+    margin-top: u.rem(20);
+  }
+}
+.bl_table2cols th,
+.bl_table2cols td {
+  vertical-align: middle; // タテ中央寄せ
+  padding-top: u.rem(18);
+  padding-bottom: u.rem(18);
+  padding-left: u.rem(10);
+  padding-right: u.rem(10);
+
+  @include u.mq("md") {
+    padding-top: u.rem(26);
+    padding-bottom: u.rem(26);
+  }
+}
+// sp時は全てのセルに背景色をつける
+.bl_table2cols tr th,
+.bl_table2cols tr td {
+  background-color: rgba(62, 73, 98, 0.1);
+}
+// pc時は1行ごとに背景色をつける
+.bl_table2cols tr:nth-of-type(2n) th,
+.bl_table2cols tr:nth-of-type(2n) td {
+  @include u.mq("md") {
+    background-color: transparent;
+  }
+}
+
+.bl_table2cols tr {
+}
+
+// 左列
+.bl_table2cols th {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  text-align: left;
+  margin-top: u.rem(15);
+
+  @include u.mq("md") {
+    display: table-cell;
+    width: 30%;
+    margin-top: 0;
+  }
+}
+// 右列
+.bl_table2cols td {
+  display: block;
+  width: 100%;
+  margin-top: u.rem(5);
+
+  @include u.mq("md") {
+    display: table-cell;
+    width: auto;
+    margin-top: 0;
+  }
+}
+// 数字リストの数字が左にはみ出る分を調整
+.bl_table2cols td ol {
+  padding-left: u.rem(22);
+}

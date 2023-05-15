@@ -1,0 +1,56 @@
+@use '../../utilities' as u;
+
+.bl_priceTable_wrapper {
+  width: u.rem(500);
+  max-width: 100%;
+  padding-top: u.rem(40);
+  @include u.mq('md') {
+    width: u.rem(400);
+  }
+}
+
+.bl_priceTable {
+  width: 100%;
+}
+.bl_priceTable_heading {
+  color: u.$colorTheme;
+  padding-bottom: u.rem(9);
+  border-bottom: u.rem(1) solid u.$colorTheme;
+}
+.bl_priceTable_row.bl_priceTable_row__header {
+  text-align: left;
+  padding-top: u.rem(31);
+}
+//左側の列を左寄せ
+.bl_priceTable_row > td:nth-child(1),
+.bl_priceTable_row.bl_priceTable_row__header > th:nth-child(1) {
+  text-align: left;
+}
+//右側の列を右寄せ
+.bl_priceTable_row > td:nth-child(2),
+.bl_priceTable_row.bl_priceTable_row__header > th:nth-child(2) {
+  text-align: right;
+}
+.bl_priceTable_row {
+  border-bottom: u.rem(1) solid #ddd;
+}
+
+.bl_priceTable_row.bl_priceTable_row__header > th {
+  padding-top: u.rem(28);
+  padding-bottom: u.rem(4);
+}
+.bl_priceTable_row > td {
+  padding-top: u.rem(12);
+  padding-bottom: u.rem(10);
+}
+.bl_priceTable_row:nth-child(2) > td {
+  padding-top: u.rem(28);
+  padding-bottom: u.rem(10);
+}
+.bl_priceTable_note {
+  padding-top: u.rem(14);
+}
+
+.un_access {
+  display: flex;
+}

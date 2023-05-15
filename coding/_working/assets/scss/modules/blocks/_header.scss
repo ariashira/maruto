@@ -1,0 +1,51 @@
+@use "../../utilities" as u;
+
+.bl_header {
+  width: 100%; // 画面幅いっぱいになるように変更
+  height: u.$headerHeight__md;
+  justify-content: space-between;
+  white-space: nowrap;
+  background-color: #fff;
+  padding-left: u.rem(20);
+
+  @include u.mq("lg") {
+    display: flex;
+    height: u.$headerHeight;
+    padding-left: u.rem(30);
+    padding-right: u.rem(0);
+  }
+}
+.bl_header.bl_header__shadow {
+  box-shadow: 0 u.rem(4) u.rem(5) rgba(0, 0, 0, 0.2);
+}
+
+.bl_header_navWrapper {
+  width: auto;
+  @include u.mq("md") {
+    width: u.rem(750);
+  }
+}
+
+//固定ヘッダの場合で必要なら付ける
+//スクロール時に固定ヘッダの高さを狭くする
+.bl_header__fixed.js_header__narrow {
+  height: u.$headerNarrowHeight;
+  margin-top: u.rem(16);
+}
+
+.bl_header_overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  height: 0;
+  width: 100vw;
+  background-color: gray;
+  opacity: 0.5;
+  transition: 0.2s ease-out;
+}
+
+#hamburger_checkBox:checked ~ .bl_header_overlay {
+  display: block; // ハンバーガーボタンクリック時に表示
+  height: 100vh;
+  z-index: 80;
+}

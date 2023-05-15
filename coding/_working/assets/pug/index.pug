@@ -1,0 +1,42 @@
+doctype html
+include ./utilities/_mixin.pug
+
+- var path = "./"
+- var title = "株式会社丸東製作所"
+- var descr = "";
+
+html(lang="ja")
+  head(prefix="og: http://ogp.me/ns#")
+    +metaInfo(title, descr, './', true, "")
+    +googleFonts
+
+    //css
+    link(rel="stylesheet", href=path+"assets/css/style.css")
+    |
+    |
+    //swiper
+    link(rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
+  body
+    +header(path)
+    .bl_bgShape
+      main
+        article
+          include ./components/home/_MV.pug
+          include ./components/home/_news.pug
+          include ./components/home/_business.pug
+          include ./components/home/_contact.pug
+          include ./components/home/_twitter.pug
+
+      +footer(path)
+    |
+    |
+    //jQuery
+    script(src="https://code.jquery.com/jquery-3.4.1.js")
+    |
+    |
+    //swiper
+    script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
+    |
+    |
+    //オリジナルjsスクリプト
+    script(src=path + "assets/js/scripts.js")

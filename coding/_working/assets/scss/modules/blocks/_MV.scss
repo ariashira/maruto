@@ -1,0 +1,41 @@
+@use "../../utilities" as u;
+
+.bl_MV {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 390 / 784;
+  overflow: hidden;
+
+  @include u.mq("md") {
+    aspect-ratio: 1920 / 980;
+  }
+}
+.swiper-slide {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.swiper-slide::after {
+  position: absolute;
+  content: "";
+  background-color: u.$colorAccent;
+  mix-blend-mode: soft-light;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide > img {
+  object-fit: cover;
+  height: 100%;
+}
+.bl_MV_heading_wrapper {
+  position: relative;
+  gap: u.rem(40);
+}
+.bl_MV_heading {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 10;
+}

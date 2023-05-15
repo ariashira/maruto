@@ -1,0 +1,86 @@
+// パンくずリスト
+ol(itemscope="" itemtype="https://schema.org/BreadcrumbList").bl_breadcrumb
+  li(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+    a(itemprop="item" href="./page-products.html")
+      span(itemprop="name") 製品情報
+    meta(itemprop="position" content="1")
+  li(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+    a(itemprop="item" href="#")
+      span(itemprop="name") エアメータ
+    meta(itemprop="position" content="2")
+  li(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+    span(itemprop="name") 単位水量迅速推定システム　CF13
+    meta(itemprop="position" content="3")
+
+// メディア（テキスト＋画像の横並び）
+section.un_product_details_section
+  .bl_media
+    // pc時のみ表示する画像
+    figure.bl_media_img.mdUp_only
+      img(src="./assets/img/products/cf13.jpg" alt="")
+    .bl_media_body
+      h2.un_lv2hdg.un_borderBottom 単位水量迅速推定システム　CF13
+      // sp時のみ表示する画像
+      figure.mdDown_only.un_product_details_spImg
+        img(src="./assets/img/products/cf13.jpg" alt="")
+      p.un_normalTxt JIS A 1128 準拠 （ 空気量測定 ）<br>
+        | 本システムは、独立法人土木研究所が提案した単位水量推定式に基づいたプログラムを採用した単位水量迅速推定システムです。<br>
+        | 空気量を測定するときに、エアメータの質量を量る作業を加えるだけで簡単に単位水量を推定できます。
+// 概要
+section.un_product_details_section
+  h3.un_lv3hdg.un_borderBottom 概要
+  p.un_normalTxt コンクリートの材料の中で、水は他の材料に比較して密度が小さいので、単位水量が変化するとコンクリートの密度も変化します。エアメータ法はコンクリートの密度の違いから単位水量を推定します。
+// 仕様
+section.un_product_details_section
+  h3.un_lv3hdg.un_borderBottom 仕様
+  table.bl_table2cols
+    tbody
+      tr
+        th ①本体（試料容器）
+        td 容量：7 L 、マグネシウム合金製　質量：約 6 kg
+      tr
+        th ②圧力計（空気量計測用精密ゲージ）
+        td ベローズ式、24時間耐久試験合格品、無注水法・注水法用目盛付、防水タイプ
+      tr
+        th ③最小目盛
+        td 0.1 ％
+      tr
+        th ④付属品
+        td
+          ol
+            li 検査成績書
+            li 突棒
+            li ベークライト製ストレート・エッジ
+            li メス・シリンダ ( 100 ml )
+            li スポイト
+            li キャリブレーション用パイプ
+// 演算用iPod touch
+section.un_product_details_section
+  h3.un_lv3hdg.un_borderBottom 演算用iPod touch
+  table.bl_table2cols
+    tbody
+      tr
+        th ①OS
+        td iOS
+      tr
+        th ②メモリ内容
+        td 生コンクリートの配合 10件<br>
+          | 【測定値】　　無注水法、注水法 各100件<br>
+          | 【測定結果】　無注水法、注水法 各40件
+      tr
+        th ③データリンク
+        td 保存したデータは『iTunes』と接続してPCに取り込むことができます<br>
+          | ※別売のプリンターを利用することでプリントアウトが可能<br>
+          | ■お客様に用意していただくもの<br>
+          | 　はかり（推奨仕様 ＝ ひょう量：25 kg 以上、最小目盛り：5 g 以下、電池式）
+// 別途注文品
+section.un_product_details_section
+  h3.un_lv3hdg.un_borderBottom 別途注文品
+  ul.un_product_markedList
+    li レベラー
+    li 収納ケース
+    li モバイルプリンタ
+    li はかり
+// ダンロードボタン
+.un_product_details_btn_wrapper
+  .el_btn.el_btn__filled.el_btn__lg カタログをダウンロード

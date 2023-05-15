@@ -1,0 +1,53 @@
+@use "../../utilities" as u;
+
+.el_badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  // font-size: u.rem(24);  // font-sizeはhelperクラスで対応
+  // line-height: calc(35/24);
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: center;
+  height: u.rem(137);
+  width: u.rem(252);
+  padding: u.rem(4);
+  background-color: u.$colorTheme;
+  border: 1px solid transparent;
+  border-radius: u.rem(999);
+
+  @include u.mq('md') {
+    // font-size: u.rem(20); // font-sizeはhelperクラスで対応
+  }
+  // @include u.mq('md') {
+    // position: relative;
+    // top: u.rem(-2);
+    // right: 0;
+    // left: u.rem(8);
+  // }
+}
+
+.el_dots {
+  position: relative;
+}
+.el_dots::after,
+.el_dots::before {
+  content: '';
+  background-color: u.$colorTheme;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.el_dots::after {
+  height: u.rem(15);
+  width: u.rem(15);
+  left: 0;
+  bottom: u.rem(-1);
+}
+.el_dots::before {
+  height: u.rem(10);
+  width: u.rem(10);
+  left: u.rem(-15);
+  bottom: u.rem(-9);
+}

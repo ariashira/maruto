@@ -1,0 +1,65 @@
+@use "../utilities" as u;
+
+/* サイズ指定をremにする */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: u.$fontBase;
+  font-feature-settings: "palt"; // カーニング自動調整
+  font-size: u.rem(16);
+  line-height: 1.7;
+  font-weight: normal;
+  letter-spacing: 0em;
+  color: u.$colorBaseFont;
+
+  @include u.mq("md") {
+    font-size: u.rem(20);
+  }
+}
+
+::selection {
+  //テキスト選択時の背景色と文字色
+  background: u.$colorAccent;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+a {
+  transition: 0.1s opacity;
+}
+a:hover,
+a:active {
+  opacity: 0.6;
+}
+
+textarea,
+input,
+button,
+select {
+  // inputやtextareaなどでフォント系を継承しないのを回避
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+img,
+picture {
+  width: 100%;
+  display: block; //これが無いと画像下にムダな余白が出来ることがある
+}
