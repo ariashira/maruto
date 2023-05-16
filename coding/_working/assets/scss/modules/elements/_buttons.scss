@@ -85,6 +85,17 @@
   font-size: u.rem(20);
   font-weight: normal;
 }
+.el_btn.el_btn__xlg {
+  width: auto;
+  font-size: u.rem(20);
+  line-height: 1;
+  font-weight: normal;
+  padding: u.rem(22) u.rem(40);
+
+  @include u.mq("md") {
+    font-size: u.rem(24);
+  }
+}
 
 //長いテキストが入っているボタンは画面幅によっては
 //ボタン幅がテキスト幅に足りなくなるため、幅方向のpaddingを%指定にする

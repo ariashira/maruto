@@ -2,6 +2,32 @@
 @use "../utilities" as u;
 
 /**********************
+  共通使用
+***********************/
+// 縦に日本語と英語のタイトルが並ぶセクションタイトル
+.un_2line_sectionTitle {
+  text-align: center;
+}
+.un_2line_title_jp {
+  display: block;
+}
+
+// パンくずリストがない時のページ最初のセクションタイトル
+.un_general_heading_wrapper {
+  padding-top: u.rem(40);
+  padding-bottom: u.rem(24);
+
+  @include u.mq("md") {
+    padding-top: u.rem(100);
+    padding-bottom: u.rem(50);
+  }
+}
+.un_dummy_content {
+  padding-top: u.rem(50);
+  padding-bottom: u.rem(50);
+}
+
+/**********************
   Businessセクション
 ***********************/
 .un_business_section {
@@ -167,13 +193,6 @@
     padding-top: u.rem(100);
     padding-bottom: u.rem(36);
   }
-}
-.un_contact_sectionTitle {
-  text-align: center;
-}
-
-.un_contact_title_jp {
-  display: block;
 }
 
 .un_contact_lead {
@@ -476,3 +495,127 @@
 .un_1stLetterTheme::first-letter {
   color: u.$colorTheme;
 }
+
+/**********************
+  お知らせ一覧ページ
+***********************/
+.un_newslist_heading_wrapper {
+  padding-top: u.rem(24);
+
+  @include u.mq("md") {
+    padding-top: u.rem(0);
+  }
+}
+
+/**********************
+  お知らせ詳細ページ
+***********************/
+.un_newsDetail_wrapper {
+  padding: u.rem(15);
+  background-color: #fff;
+
+  @include u.mq("md") {
+    padding: u.rem(50);
+  }
+}
+.un_newsDetail_title_wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include u.mq("md") {
+    flex-direction: row;
+    gap: u.rem(30);
+  }
+}
+.un_newsDetail_date {
+  font-size: u.rem(24);
+  font-weight: bold;
+  color: u.$colorTheme;
+
+  @include u.mq("md") {
+    font-size: u.rem(30);
+  }
+}
+.un_newsDetail_title {
+  font-size: u.rem(24);
+  font-weight: bold;
+
+  @include u.mq("md") {
+    font-size: u.rem(30);
+  }
+}
+.un_newsDetail_text {
+  font-size: u.rem(16);
+
+  @include u.mq("md") {
+    font-size: u.rem(18);
+  }
+}
+.un_newsDetail_heading {
+  font-size: u.rem(20);
+  font-weight: bold;
+
+  @include u.mq("md") {
+    font-size: u.rem(24);
+  }
+}
+.un_newsDetail_space {
+  padding-top: u.rem(24);
+
+  @include u.mq("md") {
+    padding-top: u.rem(40);
+  }
+}
+
+/**********************
+  海外 Overseas ページ
+***********************/
+
+/**********************
+  プライバシーポリシー ページ
+***********************/
+
+/**********************
+  サイトマップ ページ
+***********************/
+.un_sitemap_group_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem(24);
+  padding-bottom: u.rem(100);
+
+  @include u.mq("md") {
+    padding-bottom: u.rem(200);
+  }
+}
+.un_squareLink_wrapper {
+  color: u.$colorTheme;
+}
+
+.un_squareLink {
+  display: block;
+  position: relative;
+  width: 100%;
+  font-size: u.rem(20);
+  font-weight: bold;
+  // color: u.$colorTheme; // ラッパー側に指定（visitedの色を変えないようinheritを指定してあるため）
+  padding: u.rem(4) u.rem(8);
+  border: u.rem(1) solid u.$colorTheme;
+
+  @include u.mq("md") {
+    font-size: u.rem(24);
+  }
+}
+
+.un_sitemapSubLink_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem(8);
+  padding: u.rem(20) u.rem(8) 0;
+}
+.un_sitemapSubLink {
+  display: inline-block;
+  width: max-content;
+  font-weight: bold;
+}
+

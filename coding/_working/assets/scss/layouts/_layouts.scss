@@ -7,6 +7,9 @@
   margin-right: auto;
   margin-left: auto;
 }
+.ly_cont__wide {
+  max-width: u.$contWidth__wide + u.rem(30);
+}
 
 .ly_header_spacer {
   height: u.$headerHeight__md; // ヘッダー固定した分の高さ調整
