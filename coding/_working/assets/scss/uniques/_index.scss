@@ -480,14 +480,6 @@
     font-size: u.rem(20);
   }
 }
-.un_recruit_lv3Heading {
-  font-size: u.rem(20);
-  padding-bottom: u.rem(10);
-
-  @include u.mq("md") {
-    font-size: u.rem(24);
-  }
-}
 .un_recruit_pageBottom {
   padding-bottom: u.rem(174);
 }
@@ -577,8 +569,9 @@
 
 /**********************
   サイトマップ ページ
+  事業紹介 ページ
 ***********************/
-.un_sitemap_group_wrapper {
+.un_link_group_wrapper {
   display: flex;
   flex-direction: column;
   gap: u.rem(24);
@@ -588,11 +581,21 @@
     padding-bottom: u.rem(200);
   }
 }
-.un_squareLink_wrapper {
+.un_link_group_wrapper.__v2 {
+  padding-bottom: u.rem(20);
+
+  @include u.mq("md") {
+    padding-bottom: u.rem(30);
+  }
+}
+// スタイルは無いが配下の要素をまとめるのに必要な要素
+.un_link_group {
+}
+.un_square_wrapper {
   color: u.$colorTheme;
 }
 
-.un_squareLink {
+.un_square {
   display: block;
   position: relative;
   width: 100%;
@@ -606,16 +609,120 @@
     font-size: u.rem(24);
   }
 }
+.un_square.__fz_sm {
+  font-size: u.rem(18);
 
-.un_sitemapSubLink_wrapper {
+  @include u.mq("md") {
+    font-size: u.rem(20);
+  }
+}
+
+.un_subLink_wrapper {
   display: flex;
   flex-direction: column;
   gap: u.rem(8);
   padding: u.rem(20) u.rem(8) 0;
 }
-.un_sitemapSubLink {
+// grid要素の直下にaタグだとリンク範囲がテキスト長以上に広がるので、それを防ぐためのラッパー
+.un_subLink_inner {
+  // 中身は不要
+}
+.un_subLink {
   display: inline-block;
-  width: max-content;
+  width: auto;
   font-weight: bold;
 }
 
+/**********************
+  事業紹介トップ ページ
+***********************/
+.un_business_lead {
+  font-size: u.rem(16);
+  padding-top: u.rem(12);
+  padding-bottom: u.rem(30);
+
+  @include u.mq("md") {
+    font-size: u.rem(18);
+  }
+}
+.un_business_subTitle {
+  font-size: u.rem(20);
+  padding-top: u.rem(20);
+
+  @include u.mq("md") {
+    font-size: u.rem(24);
+  }
+}
+.un_business_page_section {
+  padding-top: u.rem(16);
+  padding-bottom: u.rem(16);
+
+  @include u.mq("md") {
+    padding-top: u.rem(10);
+    padding-bottom: u.rem(30);
+  }
+}
+.un_business_page_section.__v2 {
+  padding-bottom: u.rem(60);
+  @include u.mq("md") {
+    padding-bottom: u.rem(100);
+  }
+}
+.un_business_page_section.__v3 {
+  padding-bottom: u.rem(60);
+  @include u.mq("md") {
+    padding-bottom: u.rem(190);
+  }
+}
+
+.un_link_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: u.rem(10);
+  row-gap: u.rem(30);
+  padding-top: u.rem(20);
+
+  @include u.mq("md") {
+    grid-template-columns: repeat(auto-fit, minmax(u.rem(450), 1fr));
+    row-gap: u.rem(46);
+  }
+}
+
+/**********************
+  事業紹介 代理店 ページ
+***********************/
+.un_agent_area_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 6%;
+  row-gap: u.rem(30);
+  padding-top: u.rem(0);
+
+  @include u.mq("md") {
+    grid-template-columns: repeat(auto-fit, minmax(u.rem(400), 1fr));
+    row-gap: u.rem(65);
+  }
+}
+.un_agents_prefs_wrapper {
+  padding-left: u.rem(8);
+}
+.un_agents_pref {
+  font-size: u.rem(18);
+
+  @include u.mq("md") {
+    font-size: u.rem(20);
+  }
+}
+.un_agents_wrapper {
+  font-size: u.rem(16);
+  padding-top: u.rem(20);
+}
+.un_agents_telfax,
+.un_agents_mail,
+.un_agents_url {
+  display: block;
+}
+
+// .bl_accordion_body {
+//   display: block;
+// }

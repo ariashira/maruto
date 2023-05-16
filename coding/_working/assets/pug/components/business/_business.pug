@@ -1,0 +1,102 @@
+-
+  const links = [
+    {
+      mainTitle: "セメント・コンクリート試験機器",
+      mainUrl: "#",
+    },
+    {
+      mainTitle: "土質試験機器",
+      mainUrl: "#",
+    },
+    {
+      mainTitle: "試験・研究用切断機",
+      mainUrl: "#",
+    },
+    {
+      mainTitle: "水理実験装置",
+      mainUrl: "#",
+      subs: [
+        {
+          subTitle: "埼玉県こども動物自然公園",
+          subUrl: "#",
+        },
+        {
+          subTitle: "Yangon Technological University",
+          subUrl: "#",
+        },
+      ],
+    },
+    {
+      mainTitle: "複合材料試験機器",
+      mainUrl: "#",
+    },
+  ];
+
+-
+  const links2 = [
+    {
+      title: "公益社団法人 地盤工学会（JGS）",
+      url: "#",
+    },
+    {
+      title: "社団法人 全国地質調査業協会連合会（全地連）",
+      url: "#",
+    },
+    {
+      title: "千葉県複合材料技術研究会",
+      url: "#",
+    },
+    {
+      title: "公益社団法人 土木学会（JSCE）",
+      url: "#",
+    },
+    {
+      title: "一般社団法人 日本建築学会（AIJ）",
+      url: "#",
+    },
+    {
+      title: "公益社団法人 日本コンクリート工学会（JCI）",
+      url: "#",
+    },
+    {
+      title: "日本試験機工業会（JTM）",
+      url: "#",
+    },
+    {
+      title: "一般社団法人 日本複合材料学会",
+      url: "#",
+    },
+    {
+      title: "公益社団法人 農業農村工学会（JSIDRE）",
+      url: "#",
+    },
+  ];
+
+.el_lv2Heading_wrapper.un_general_heading_wrapper
+  h2.el_lv2Heading business
+    span.el_lv2Heading_jp 事業紹介
+
+section.un_business_page_section
+  h3.el_lv3Heading.__fz_lg.un_1stLetterTheme.un_borderBottom 各種納入事例
+  p.un_business_lead 丸東製品は日本及び世界の各地に納入され活躍しております。ここでは、これまで納入させていただいた製品の一部をご覧ください。
+
+  .un_link_group_wrapper.__v2
+    each item in links
+      .un_link_group
+        .un_square_wrapper
+          a(href=item.mainUrl).un_square.__fz_sm.el_arrow_right= item.mainTitle
+        if item.subs && Array.isArray(item.subs)
+          .un_subLink_wrapper
+            each sub in item.subs
+              .un_subLink_inner
+                a(href=sub.subUrl).un_subLink.el_listMarkIcon.hp_fw__normal= sub.subTitle
+
+section.un_business_page_section.__v2
+  h3.el_lv3Heading.__fz_lg.un_1stLetterTheme.un_borderBottom リンク集
+  p.un_business_subTitle 団体・学会
+
+  //- .un_link_group_wrapper.__v2
+  .un_link_grid
+    each item in links2
+      .un_subLink_inner
+        a(href=item.url).un_subLink.el_listMarkIcon= item.title

@@ -1,0 +1,912 @@
+-
+  const items = [
+    {
+      area: "北海道 / 東北地方",
+      prefs: [
+        {
+          pref: "北海道",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10 ダミーテキストダミーテキストダミーテキスト",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "青森県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "岩手県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "宮城県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "秋田県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "山形県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "福島県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+
+      ],
+    },
+
+    {
+      area: "関東 / 甲信越地方",
+      prefs: [
+        {
+          pref: "茨城県",
+          disable: true,
+        },
+        {
+          pref: "栃木県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "群馬県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "埼玉県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "千葉県",
+          disable: true,
+        },
+        {
+          pref: "東京都",
+          disable: true,
+        },
+        {
+          pref: "神奈川県",
+          disable: true,
+        },
+        {
+          pref: "山梨県",
+          disable: true,
+        },
+        {
+          pref: "長野県",
+          disable: true,
+        },
+        {
+          pref: "新潟県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+      ],
+    },
+    {
+      area: "東海 / 北陸地方",
+      prefs: [
+        {
+          pref: "愛知県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "岐阜県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "三重県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "静岡県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "富山県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "石川県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "福井県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+      ],
+    },
+    {
+      area: "近畿地方",
+      prefs: [
+        {
+          pref: "滋賀県",
+          disable: true,
+        },
+        {
+          pref: "京都府",
+          disable: true,
+        },
+        {
+          pref: "大阪府",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "兵庫県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "奈良県",
+          disable: true,
+        },
+        {
+          pref: "和歌山県",
+          disable: true,
+        },
+      ],
+    },
+    {
+      area: "中国 / 四国地方",
+      prefs: [
+        {
+          pref: "鳥取県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "島根県",
+          disable: true,
+        },
+        {
+          pref: "岡山県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "広島県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "山口県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "徳島県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "香川県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "愛媛県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "高知県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+      ],
+    },
+    {
+      area: "九州 / 沖縄地方",
+      prefs: [
+        {
+          pref: "福岡県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "佐賀県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "長崎県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "熊本県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "大分県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "宮﨑県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "鹿児島県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+        {
+          pref: "沖縄県",
+          disable: false,
+          agents: [
+            {
+              name: "マルタニ試工　株式会社",
+              address: "〒811-2232 粕屋郡志免町別府西3-8-10",
+              tel: "092-935-1247",
+              fax: "092-935-2025",
+              mail: "fukuoka@marutanishiko.co.jp",
+              url: "http://www.marutanishiko.co.jp/",
+            },
+            {
+              name: "株式会社　鈴屋商会",
+              address: "〒810-0033 福岡市中央区小笹1-5-13 鈴屋ビル",
+              tel: "092-534-8240",
+              fax: "092-523-5655",
+              mail: "suzuya@bk.iij4u.or.jp",
+              url: "http://www.suzuya.mobi/",
+            },
+          ]
+        },
+      ],
+    },
+
+  ];
+
+
+.el_lv2Heading_wrapper.un_general_heading_wrapper
+  h2.el_lv2Heading business
+    span.el_lv2Heading_jp 事業紹介
+
+section.un_business_page_section.__v3
+  h3.el_lv3Heading.__fz_lg.un_1stLetterTheme.un_borderBottom 国内代理店・販売店
+  p.un_business_lead
+    | お客さまの様々なニーズにお応えした丸東製品をスムーズにご提供するビジネスネットワーク<br>
+    | ※ リンクの貼られていない県の方は弊社営業部
+    a(href="tel:03-3643-2111") （03-3643-2111）
+    | までご相談ください。
+
+  .un_agent_area_grid
+    each item in items
+      .un_agent_area
+        .un_square_wrapper
+          .un_square= item.area
+        if item.prefs && Array.isArray(item.prefs)
+          .un_agents_prefs_wrapper
+            each pref in item.prefs
+              .bl_accordion
+                .bl_accordion_item
+                  .js_accordion_heading.bl_accordion_btn_wrapper
+                    if (pref.disable)
+                      button.bl_accordion_btn.__sm.js_accordion(type="button" disabled).un_agents_pref #{pref.pref}
+                    else
+                      button.bl_accordion_btn.__sm.js_accordion(type="button").un_agents_pref #{pref.pref}
+                  if pref.agents && Array.isArray(pref.agents)
+                    .bl_accordion_body
+                      each agent in pref.agents
+                        .un_agents_wrapper
+                          .un_agents_name.hp_colTheme= agent.name
+                          .un_agents_address= agent.address
+                          .un_agents_telfax
+                            a(href="tel:" + agent.tel)  Tel #{agent.tel}　
+                            | Fax #{agent.fax}
+                          a(href="mailto:" + agent.mail).un_agents_mail Mail #{agent.mail}
+                          a(href=agent.url).un_agents_url URL #{agent.url}

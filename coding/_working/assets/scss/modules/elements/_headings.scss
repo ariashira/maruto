@@ -90,3 +90,19 @@
     bottom: u.rem(3);
   }
 }
+
+.el_lv3Heading {
+  font-size: u.rem(20);
+  padding-bottom: u.rem(10);
+
+  @include u.mq("md") {
+    font-size: u.rem(24);
+  }
+}
+.el_lv3Heading.__fz_lg {
+  font-size: u.rem(24);
+
+  @include u.mq("md") {
+    font-size: u.rem(30);
+  }
+}

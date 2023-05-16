@@ -71,13 +71,14 @@
 
 .el_lv2Heading_wrapper.un_general_heading_wrapper
   h2.el_lv2Heading Site map
-section.un_sitemap_group_wrapper
+section.un_link_group_wrapper
   each item in links
-    .un_sitemap_group
-      .un_squareLink_wrapper
-        a(href=item.mainUrl).un_squareLink.el_arrow_right= item.mainTitle
+    .un_link_group
+      .un_square_wrapper
+        a(href=item.mainUrl).un_square.el_arrow_right= item.mainTitle
       if item.subs && Array.isArray(item.subs)
-        .un_sitemapSubLink_wrapper
+        .un_subLink_wrapper
           each sub in item.subs
-            a(href=sub.subUrl).un_sitemapSubLink.el_listMarkIcon= sub.subTitle
+            .un_subLink_inner
+              a(href=sub.subUrl).un_subLink.el_listMarkIcon= sub.subTitle
 

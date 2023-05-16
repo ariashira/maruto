@@ -89,7 +89,7 @@
   width: auto;
   font-size: u.rem(20);
   line-height: 1;
-  font-weight: normal;
+  font-weight: 500;
   padding: u.rem(22) u.rem(40);
 
   @include u.mq("md") {

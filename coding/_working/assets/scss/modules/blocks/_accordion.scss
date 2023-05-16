@@ -51,6 +51,10 @@
   top: 50%;
   transition: 0.3s;
 }
+.bl_accordion_btn.__sm::before,
+.bl_accordion_btn.__sm::after {
+  width: u.rem(16);
+}
 .bl_accordion_btn::after {
   transform: rotate(90deg);
 }

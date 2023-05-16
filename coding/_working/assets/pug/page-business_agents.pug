@@ -1,0 +1,31 @@
+doctype html
+include ./utilities/_mixin.pug
+
+- var path = "./"   // ディレクトリ階層がある場合
+- var title = "事業紹介 | 株式会社丸東製作所"
+- var descr = "";
+
+html(lang="ja")
+  head
+    +metaInfo(title, descr, './', false, 'page-business.html')
+    +googleFonts
+
+    //css
+    link(rel="stylesheet", href=path+"assets/css/style.css")
+
+  body
+    +header(path)
+    .bl_bgShape.bl_bgShape__v2
+      main
+        article.ly_cont
+          include ./components/business/_business_agents.pug
+
+      +footer(path)
+    |
+    |
+    //jQuery
+    script(src="https://code.jquery.com/jquery-3.4.1.js")
+    |
+    |
+    //オリジナルjsスクリプト
+    script(src=path + "assets/js/scripts.js")
