@@ -1,0 +1,25 @@
+@use "../../utilities" as u;
+
+.el_listMarkIcon {
+  position: relative;
+  padding-left: u.rem(24);
+
+  @include u.mq("md") {
+    padding-left: u.rem(30);
+  }
+}
+.el_listMarkIcon::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../assets/img/common/icon_listArrow.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: u.rem(15);
+  height: u.rem(15);
+  left: 0;
+  top: u.rem(6); // line-heightに合わせて調整が必要(テキストが改行しても1行目にマークをつけるため)
+
+  @include u.mq("md") {
+    top: u.rem(10); // line-heightに合わせて調整が必要(テキストが改行しても1行目にマークをつけるため)
+  }
+}

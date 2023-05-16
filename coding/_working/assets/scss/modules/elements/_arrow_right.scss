@@ -1,0 +1,22 @@
+@use "../../utilities" as u;
+
+.el_arrow_right {
+  position: relative;
+}
+
+.el_arrow_right::after {
+  position: absolute;
+  content: "";
+  width: u.rem(12);
+  height: u.rem(12);
+  border-top: u.rem(3) solid u.$colorTheme;
+  border-right: u.rem(3) solid u.$colorTheme;
+  right: u.rem(20);
+  top: 50%;
+  transform: rotate(45deg) translateY(-50%);
+
+  @include u.mq("md") {
+    width: u.rem(15);
+    height: u.rem(15);
+  }
+}

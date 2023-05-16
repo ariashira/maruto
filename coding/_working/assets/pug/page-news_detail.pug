@@ -1,0 +1,30 @@
+doctype html
+include ./utilities/_mixin.pug
+
+- var path = "./"
+- var title = "お知らせ詳細 | 株式会社丸東製作所"
+- var descr = "";
+
+html(lang="ja")
+  head(prefix="og: http://ogp.me/ns#")
+    +metaInfo(title, descr, './', false, 'page-news_detail.html')
+    +googleFonts
+
+    //css
+    link(rel="stylesheet", href=path+"assets/css/style.css")
+
+  body
+    +header(path)
+    .bl_bgShape.bl_bgShape__v2
+      main
+        article
+          include ./components/news/_news_detail.pug
+      +footer(path)
+    |
+    |
+    //jQuery
+    script(src="https://code.jquery.com/jquery-3.4.1.js")
+    |
+    |
+    //オリジナルjsスクリプト
+    script(src=path + "assets/js/scripts.js")

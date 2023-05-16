@@ -1,0 +1,36 @@
+doctype html
+include ./utilities/_mixin.pug
+
+- var path = "./"
+- var title = "プライバシーポリシー | 株式会社丸東製作所"
+- var descr = "";
+
+html(lang="ja")
+  head
+    +metaInfo(title, descr, './', false, 'page-overseas.html')
+    +googleFonts
+
+    //css
+    link(rel="stylesheet", href=path+"assets/css/style.css")
+
+  body
+    +header(path)
+    .bl_bgShape.bl_bgShape__v2
+      main
+        article
+          // コンテンツ
+          section.ly_cont
+            h2.un_2line_sectionTitle.un_general_heading_wrapper
+              span.un_2line_title_jp.hp_fw__normal プライバシーポリシー
+              span.el_lv2Heading.el_lv2Heading__noDeco Privacy Policy
+            .un_dummy_content 以下コンテンツ
+
+      +footer(path)
+    |
+    |
+    //jQuery
+    script(src="https://code.jquery.com/jquery-3.4.1.js")
+    |
+    |
+    //オリジナルjsスクリプト
+    script(src=path + "assets/js/scripts.js")

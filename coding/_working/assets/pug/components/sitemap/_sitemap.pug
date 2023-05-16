@@ -1,0 +1,83 @@
+-
+  const links = [
+    {
+      mainTitle: "会社情報",
+      mainUrl: "#",
+      subs: [
+        {
+          subTitle: "項目が増やせます",
+          subUrl: "#",
+        },
+        {
+          subTitle: "項目が増やせます2",
+          subUrl: "#",
+        },
+      ],
+    },
+    {
+      mainTitle: "製品情報",
+      mainUrl: "#",
+      subs: [
+        {
+          subTitle: "項目が増やせます",
+          subUrl: "#",
+        },
+      ],
+    },
+    {
+      mainTitle: "各種納入事例",
+      mainUrl: "#",
+      subs: [
+        {
+          subTitle: "項目が増やせます",
+          subUrl: "#",
+        },
+      ],
+    },
+    {
+      mainTitle: "国内代理店・販売店",
+      mainUrl: "#",
+      subs: [
+        {
+          subTitle: "項目が増やせます",
+          subUrl: "#",
+        },
+      ],
+    },
+    {
+      mainTitle: "リンク集",
+      mainUrl: "#",
+      subs: [
+        {
+          subTitle: "項目が増やせます",
+          subUrl: "#",
+        },
+      ],
+    },
+    {
+      mainTitle: "OVERSEAS",
+      mainUrl: "#",
+    },
+    {
+      mainTitle: "プライバシーポリシー",
+      mainUrl: "#",
+    },
+    {
+      mainTitle: "お問い合わせ",
+      mainUrl: "#",
+    },
+  ];
+
+
+.el_lv2Heading_wrapper.un_general_heading_wrapper
+  h2.el_lv2Heading Site map
+section.un_sitemap_group_wrapper
+  each item in links
+    .un_sitemap_group
+      .un_squareLink_wrapper
+        a(href=item.mainUrl).un_squareLink.el_arrow_right= item.mainTitle
+      if item.subs && Array.isArray(item.subs)
+        .un_sitemapSubLink_wrapper
+          each sub in item.subs
+            a(href=sub.subUrl).un_sitemapSubLink.el_listMarkIcon= sub.subTitle
+

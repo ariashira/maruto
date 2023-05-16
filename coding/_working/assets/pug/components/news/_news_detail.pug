@@ -1,0 +1,40 @@
+- const pathImgNews = './assets/img/news/';
+// パンくずリスト
+.ly_cont.ly_cont__wide
+  ol(itemscope="" itemtype="https://schema.org/BreadcrumbList").bl_breadcrumb
+    li(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+      a(itemprop="item" href="./")
+        span(itemprop="name") トップページ
+      meta(itemprop="position" content="1")
+    li(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+      a(itemprop="item" href="./page-news_list.html")
+        span(itemprop="name") お知らせ一覧
+      meta(itemprop="position" content="2")
+    li(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+      span(itemprop="name") お知らせ詳細
+      meta(itemprop="position" content="3")
+
+// コンテンツ
+section.ly_cont.ly_cont__wide
+  .el_lv2Heading_wrapper.un_newslist_heading_wrapper
+    h2.el_lv2Heading news
+      span.el_lv2Heading_jp お知らせ詳細
+
+  .un_newsDetail_wrapper
+    .un_newsDetail_title_wrapper.un_borderBottom
+      time.un_newsDetail_date(datetime="2023-01-01") 2023.01.01
+      h3.un_newsDetail_title タイトルが入ります。タイトルが入ります。
+
+    figure.un_newsDetail_imgWrapper.un_newsDetail_space
+      img(src=pathImgNews + "news_detail_sample.jpg" alt="")
+    p.un_newsDetail_text.un_newsDetail_space
+      | この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+      | この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+    h4.un_newsDetail_heading.un_newsDetail_space 1.中タイトルなど
+    p.un_newsDetail_text
+      | この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+      | この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+
+  // ダンロードボタン
+  .un_product_details_btn_wrapper
+    a(href="./page-news_list.html").el_btn.el_btn__filled.el_btn__xlg お知らせ一覧に戻る

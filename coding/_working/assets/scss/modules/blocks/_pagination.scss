@@ -1,0 +1,40 @@
+@use "../../utilities" as u;
+
+.bl_pagination_wrapper {
+  padding-top: u.rem(120);
+}
+.bl_pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: u.rem(30);
+
+  @include u.mq("md") {
+    gap: u.rem(40);
+  }
+}
+.bl_page_item {
+}
+.bl_page_link {
+  display: block;
+  width: u.rem(40);
+  height: u.rem(40);
+  line-height: u.rem(40);
+  font-size: u.rem(24);
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  background-color: #8b92a1;
+  border-radius: 0;
+
+  @include u.mq("md") {
+    font-size: u.rem(30);
+    line-height: u.rem(60);
+    width: u.rem(60);
+    height: u.rem(60);
+  }
+}
+.bl_page_item.active .bl_page_link {
+  background-color: u.$colorTheme;
+  color: #fff;
+}

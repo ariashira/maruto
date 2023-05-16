@@ -1,0 +1,35 @@
+doctype html
+include ./utilities/_mixin.pug
+
+- var path = "./"
+- var title = "Overseas | MARUTO Testing Machine Company"
+- var descr = "";
+
+html(lang="ja")
+  head
+    +metaInfo(title, descr, './', false, 'page-overseas.html')
+    +googleFonts
+
+    //css
+    link(rel="stylesheet", href=path+"assets/css/style.css")
+
+  body
+    +header(path)
+    .bl_bgShape.bl_bgShape__v2
+      main
+        article
+          // コンテンツ
+          section.ly_cont
+            .el_lv2Heading_wrapper.un_general_heading_wrapper
+              h2.el_lv2Heading Overseas
+            .un_dummy_content 以下コンテンツ
+
+      +footer(path)
+    |
+    |
+    //jQuery
+    script(src="https://code.jquery.com/jquery-3.4.1.js")
+    |
+    |
+    //オリジナルjsスクリプト
+    script(src=path + "assets/js/scripts.js")

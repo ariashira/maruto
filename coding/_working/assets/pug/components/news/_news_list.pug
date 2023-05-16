@@ -1,0 +1,102 @@
+- const pathImgNews = './assets/img/news/';
+-
+  const cards = [
+    {
+      date: "2023-01-01",
+      url: "./page-news_detail.html",
+      title: "タイトルが入ります。タイトルが入ります。",
+      img: "thumb_news_sample.jpg",
+      alt: "",
+    },
+    {
+      date: "2023-01-01",
+      url: "./page-news_detail.html",
+      title: "タイトルが入ります。タイトルが入ります。",
+      img: "thumb_news_sample2.jpg",
+      alt: "",
+    },
+    {
+      date: "2023-01-01",
+      url: "./page-news_detail.html",
+      title: "タイトルが入ります。タイトルが入ります。",
+      img: "thumb_news_sample2.jpg",
+      alt: "",
+    },
+    {
+      date: "2023-01-01",
+      url: "./page-news_detail.html",
+      title: "タイトルが入ります。タイトルが入ります。",
+      img: "thumb_news_sample2.jpg",
+      alt: "",
+    },
+    {
+      date: "2023-01-01",
+      url: "./page-news_detail.html",
+      title: "タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。",
+      img: "thumb_news_sample2.jpg",
+      alt: "",
+    },
+    {
+      date: "2023-01-01",
+      url: "./page-news_detail.html",
+      title: "タイトルが入ります。タイトルが入ります。",
+      img: "thumb_news_sample2.jpg",
+      alt: "",
+    },
+    {
+      date: "2023-01-01",
+      url: "./page-news_detail.html",
+      title: "タイトルが入ります。タイトルが入ります。",
+      img: "thumb_news_sample2.jpg",
+      alt: "",
+    },
+    {
+      date: "2023-01-01",
+      url: "./page-news_detail.html",
+      title: "タイトルが入ります。タイトルが入ります。",
+      img: "thumb_news_sample2.jpg",
+      alt: "",
+    },
+    {
+      date: "2023-01-01",
+      url: "./page-news_detail.html",
+      title: "タイトルが入ります。タイトルが入ります。",
+      img: "thumb_news_sample2.jpg",
+      alt: "",
+    },
+  ];
+
+// パンくずリスト
+.ly_cont.ly_cont__wide
+  ol(itemscope="" itemtype="https://schema.org/BreadcrumbList").bl_breadcrumb
+    li(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+      a(itemprop="item" href="./")
+        span(itemprop="name") トップページ
+      meta(itemprop="position" content="1")
+    li(itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem")
+      span(itemprop="name") お知らせ一覧
+      meta(itemprop="position" content="2")
+
+// コンテンツ
+section.ly_cont.ly_cont__wide
+  .el_lv2Heading_wrapper.un_newslist_heading_wrapper
+    h2.el_lv2Heading news
+      span.el_lv2Heading_jp お知らせ一覧
+  .bl_card_grid
+    each item in cards
+      .bl_card_wrapper
+        a(href=item.url).bl_card
+          time.bl_card_date(datetime=item.date) #{item.date.replace(/-/g, ".")}
+          figure.bl_card_imgWrapper
+            img(src=pathImgNews + item.img alt=item.alt)
+          .bl_card_body
+            h3.bl_card_heading #{item.title}
+
+  .bl_pagination_wrapper
+    ul.bl_pagination
+      li.bl_page_item.active
+        a.bl_page_link(href="#") 1
+      li.bl_page_item
+        a.bl_page_link(href="#") 2
+      li.bl_page_item
+        a.bl_page_link(href="#") 3
