@@ -11,6 +11,15 @@
     margin-top: u.rem(20);
   }
 }
+// フォントを大きくしたバージョン
+.bl_table2cols.__fzLg {
+  font-size: u.rem(18);
+
+  @include u.mq("md") {
+    font-size: u.rem(20);
+  }
+}
+
 .bl_table2cols th,
 .bl_table2cols td {
   vertical-align: middle; // タテ中央寄せ
@@ -24,6 +33,35 @@
     padding-bottom: u.rem(26);
   }
 }
+// タテ上寄せのバージョン
+.bl_table2cols.__vat th,
+.bl_table2cols.__vat td {
+  vertical-align: top; // タテ上寄せ
+}
+// thとtd の各枠内のpaddingを広げたバージョン
+.bl_table2cols.__widePadding th,
+.bl_table2cols.__widePadding td {
+  padding: u.rem(6) u.rem(15);
+
+  @include u.mq("md") {
+    padding: u.rem(7) u.rem(30);
+  }
+}
+// ## 最初と最後の行だけpaddingを変更
+.bl_table2cols.__widePadding tr:first-child th,
+.bl_table2cols.__widePadding tr:first-child td {
+  @include u.mq("md") {
+    padding-top: u.rem(30);
+  }
+}
+// ## 最初と最後の行だけpaddingを変更
+.bl_table2cols.__widePadding tr:last-child th,
+.bl_table2cols.__widePadding tr:last-child td {
+  @include u.mq("md") {
+    padding-bottom: u.rem(30);
+  }
+}
+
 // sp時は全てのセルに背景色をつける
 .bl_table2cols tr th,
 .bl_table2cols tr td {
@@ -34,6 +72,13 @@
 .bl_table2cols tr:nth-of-type(2n) td {
   @include u.mq("md") {
     background-color: transparent;
+  }
+}
+// 1行ごとの背景色を打ち消したバージョン
+.bl_table2cols.__noAlternatingBgc tr:nth-of-type(2n) th,
+.bl_table2cols.__noAlternatingBgc tr:nth-of-type(2n) td {
+  @include u.mq("md") {
+    background-color: rgba(62, 73, 98, 0.1);
   }
 }
 
@@ -54,6 +99,16 @@
     margin-top: 0;
   }
 }
+
+// 左列(狭いバージョン)
+.bl_table2cols.__narrowTh th {
+  width: 100%;
+
+  @include u.mq("md") {
+    width: u.rem(160);
+  }
+}
+
 // 右列
 .bl_table2cols td {
   display: block;

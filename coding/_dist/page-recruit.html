@@ -44,26 +44,34 @@
             <nav class="bl_nav hp_zIndex__21"><!-- 3つのナビグループを囲うラッパー-->
               <div class="bl_nav_itemGroups"><!-- メインのナビゲーション-->
                 <ul class="bl_nav_itemsWrapper">
-                  <li class="bl_nav_item"><a class="bl_nav_link js_nav_link bl_underlineAnimation" href="#"><span class="bl_nav_link_text">会社情報</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only">Company</span></a></li>
-                  <li class="bl_nav_item"><a class="bl_nav_link js_nav_link bl_underlineAnimation" href="./page-products.html"><span class="bl_nav_link_text">製品情報</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only">Products</span></a></li>
-                  <li class="bl_nav_item"><a class="bl_nav_link js_nav_link bl_underlineAnimation" href="/page-news_list.html"><span class="bl_nav_link_text">お知らせ</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only">News</span></a></li>
+                  <li class="bl_nav_item"><a class="bl_nav_link js_nav_link bl_underlineAnimation" href="./page-company.html"><span class="bl_nav_link_text">会社情報</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only hp_fw__bold">Company</span></a></li>
+                  <li class="bl_nav_item"><a class="bl_nav_link js_nav_link bl_underlineAnimation" href="./page-products.html"><span class="bl_nav_link_text">製品情報</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only hp_fw__bold">Products</span></a></li>
+                  <li class="bl_nav_item"><a class="bl_nav_link js_nav_link bl_underlineAnimation" href="./page-news_list.html"><span class="bl_nav_link_text">お知らせ</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only hp_fw__bold">News</span></a></li>
                 </ul><!-- CTAのボタン2つ-->
-                <ul class="bl_nav_itemsWrapper bl_nav_itemsWrapper__cta">
-                  <li class="bl_nav_item bl_nav_item__accent"><a class="bl_nav_link js_nav_link" href="#"><span class="bl_nav_link_text">お問い合わせ</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only">Contact</span></a></li>
-                  <li class="bl_nav_item bl_nav_item__theme"><a class="bl_nav_link js_nav_link" href="/page-recruit.html"><span class="bl_nav_link_text">採用情報</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only">Recruit</span></a></li>
-                </ul><!-- SNSアイコン2つ-->
-                <ul class="bl_nav_itemsWrapper bl_nav_itemsWrapper__sns">
-                  <li class="bl_nav_item"><a class="bl_nav_link bl_nav_link__sns js_nav_link" href="#">
-                      <picture>
-                        <source media="(min-width: 992px)" srcset="./assets/img/common/icon_twitter.svg"><img src="./assets/img/common/icon_twitter__white.svg" alt="twitter">
-                      </picture>
-                    </a></li>
-                  <li class="bl_nav_item"><a class="bl_nav_link bl_nav_link__sns js_nav_link" href="#">
-                      <picture>
-                        <source media="(min-width: 992px)" srcset="./assets/img/common/icon_facebook.svg"><img src="./assets/img/common/icon_facebook__white.svg" alt="facebook">
-                      </picture>
-                    </a></li>
-                </ul>
+                <ul class="bl_nav_itemsWrapper bl_nav_itemsWrapper__cta"><!-- お問い合わせ-->
+                  <li class="bl_nav_item bl_nav_item__accent"><a class="bl_nav_link js_nav_link" href="./page-contact.html"><span class="bl_nav_link_text">お問い合わせ</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only hp_fw__bold">Contact</span></a></li><!-- 採用情報-->
+                  <li class="bl_nav_item bl_nav_item__theme"><a class="bl_nav_link js_nav_link" href="./page-recruit.html"><span class="bl_nav_link_text">採用情報</span><span class="bl_nav_link_text bl_nav_link_text__en lgUp_only hp_fw__bold">Recruit</span></a></li>
+                </ul><!-- 右端の色々-->
+                <div class="bl_nav_right"><!-- サイトマップとSNSアイコン2つ-->
+                  <div class="bl_nav_itemsWrapper bl_nav_itemsWrapper__sns">
+                    <div class="bl_nav_item bl_nav_item_sitemap"><a class="bl_nav_link js_nav_link" href="./page-sitemap.html">■サイトマップ</a></div>
+                    <ul class="bl_nav_item_sns_wrapper">
+                      <li class="bl_nav_item __twitter"><a class="bl_nav_link__sns js_nav_link" href="https://twitter.com/maruto_1951" target="_blank">
+                          <picture>
+                            <source media="(min-width: 992px)" srcset="./assets/img/common/icon_twitter.svg"><img src="./assets/img/common/icon_twitter__white.svg" alt="twitter">
+                          </picture>
+                        </a></li>
+                      <li class="bl_nav_item __facebook"><a class="bl_nav_link__sns js_nav_link" href="#" target="_blank">
+                          <picture>
+                            <source media="(min-width: 992px)" srcset="./assets/img/common/icon_facebook.svg"><img src="./assets/img/common/icon_facebook__white.svg" alt="facebook">
+                          </picture>
+                        </a></li>
+                    </ul>
+                  </div>
+                  <div class="bl_searchBox_wrapper">
+                    <form><input class="bl_searchBox" type="search" name="search"><input class="bl_searchBox_btn" type="submit" name="submit" value="検索"></form>
+                  </div>
+                </div>
               </div>
             </nav>
           </div>
@@ -143,16 +151,16 @@
           </table>
         </section>
         <section class="ly_cont un_contact_section">
-          <h2 class="un_2line_sectionTitle"><span class="un_2line_title_jp">お問合せ</span><span class="el_lv2Heading el_lv2Heading__noDeco">contact</span></h2>
+          <h2 class="un_2line_sectionTitle"><span class="un_2line_title_jp">お問い合わせ</span><span class="el_lv2Heading el_lv2Heading__noDeco">contact</span></h2>
           <lead class="un_contact_lead">製品に関すること、技術的なこと、お見積り請求、カタログ・資料請求、採用情報について などお気軽にご連絡ください。</lead>
           <div class="un_contact_boxes">
             <div class="un_contact_box un_contact_box__accent">
-              <p class="un_contact_box_heading">お電話でのお問合せ</p><a class="un_contact_box_tel" href="tel:03-3643-2111">03-3643-2111</a>
+              <p class="un_contact_box_heading">お電話でのお問い合わせ</p><a class="un_contact_box_tel" href="tel:03-3643-2111">03-3643-2111</a>
               <p class="un_contact_box_time">受付時間　00：00〜00：00</p>
             </div>
             <div class="un_contact_box un_contact_box__theme">
-              <p class="un_contact_box_heading">Webでのお問合せ</p>
-              <div class="un_contact_box_btnWrapper"><a class="el_btn el_btn__round el_btn__filled el_btn__whiteBorder el_btn__icon" href="#">Mail Form</a></div>
+              <p class="un_contact_box_heading">Webでのお問い合わせ</p>
+              <div class="un_contact_box_btnWrapper"><a class="el_btn el_btn__round el_btn__filled el_btn__whiteBorder el_btn__icon" href="./page-contact.html">Mail Form</a></div>
             </div>
           </div>
         </section>

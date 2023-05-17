@@ -82,3 +82,9 @@
 .hp_fw__bold {
   font-weight: bold !important;
 }
+.hp_taj__md {
+  @include u.mq("md") {
+    text-align: justify !important;
+    text-align-last: justify !important;
+  }
+}

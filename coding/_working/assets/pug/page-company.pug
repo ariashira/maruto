@@ -1,13 +1,13 @@
 doctype html
 include ./utilities/_mixin.pug
 
-- var path = "./"
-- var title = "採用情報 | 株式会社丸東製作所"
+- var path = "./"   // ディレクトリ階層があり相対参照にしている場合、階層を書く
+- var title = "会社情報 | 株式会社丸東製作所"
 - var descr = "";
 
 html(lang="ja")
   head
-    +metaInfo(title, descr, './', false, 'page-recruit.html')
+    +metaInfo(title, descr, './', false, 'page-company.html')
     +googleFonts
 
     //css
@@ -17,10 +17,9 @@ html(lang="ja")
     +header(path)
     .bl_bgShape.bl_bgShape__v2
       main
-        article
-          include ./components/recruit/_recruit.pug
-          include ./components/home/_contact_section.pug
-          .un_recruit_pageBottom
+        article.ly_cont
+          include ./components/company/_company.pug
+
       +footer(path)
     |
     |

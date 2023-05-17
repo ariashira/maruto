@@ -199,7 +199,7 @@
   display: block;
   text-align: center;
   font-size: u.rem(15);
-  padding-top: u.rem(0);
+  padding-top: u.rem(16);
 
   @include u.mq("md") {
     font-size: u.rem(18);
@@ -723,6 +723,57 @@
   display: block;
 }
 
-// .bl_accordion_body {
-//   display: block;
-// }
+/**********************
+  会社情報 ページ
+***********************/
+.un_company_section {
+  padding-top: u.rem(16);
+  padding-bottom: u.rem(16);
+
+  @include u.mq("md") {
+    padding-top: u.rem(10);
+    padding-bottom: u.rem(30);
+  }
+}
+// 沿革の年の列でテキストが折り返さないように右側だけpaddingを狭くする
+.bl_table2cols tr th.un_company_th_narrowPd {
+  padding-right: u.rem(15);
+}
+.un_company_characters {
+  width: u.rem(432);
+  max-width: 100%;
+  margin-left: auto;
+  padding-top: u.rem(10);
+  padding-bottom: u.rem(60);
+
+  @include u.mq("md") {
+    padding-top: u.rem(20);
+    padding-bottom: u.rem(120);
+  }
+}
+
+/**********************
+  お問い合わせ ページ
+***********************/
+.un_contact_btn_wrapper {
+  text-align: center;
+  padding-top: u.rem(32);
+  padding-bottom: u.rem(32);
+
+  @include u.mq("md") {
+    padding-top: u.rem(100);
+    padding-bottom: u.rem(100);
+  }
+}
+.un_contact_btn_lead {
+  display: block;
+  padding-bottom: u.rem(30);
+}
+.el_btn.un_contact_btn {
+  width: u.rem(328);
+  height: u.rem(60);
+  font-size: u.rem(20);
+  font-weight: bold;
+  color: #fff;
+  background-color: u.$colorAccent;
+}

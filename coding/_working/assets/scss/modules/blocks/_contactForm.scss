@@ -1,0 +1,72 @@
+@use "../../utilities" as u;
+
+.bl_contact-form_wrapper {
+  padding-top: u.rem(20);
+
+  @include u.mq("md") {
+    padding-top: u.rem(40);
+  }
+}
+.bl_contact_form {
+  width: 100%;
+  border-collapse: collapse;
+}
+.bl_contact_form tr {
+  border: 1px solid #999;
+
+  @include u.mq("md") {
+    border: none;
+  }
+}
+
+.bl_contact_form th,
+.bl_contact_form td {
+  display: block;
+
+  @include u.mq("md") {
+    display: table-cell;
+    border: 1px solid #999;
+  }
+}
+
+.bl_contact_form th {
+  width: 100%;
+  font-weight: 500;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: u.rem(10) u.rem(4);
+  background: #ecedef;
+
+  @include u.mq("md") {
+    width: u.rem(290);
+    padding: u.rem(22) u.rem(4);
+  }
+}
+.bl_contact_form th span {
+  color: #c1272d;
+  padding: 5px;
+  margin-left: 10px;
+}
+.bl_contact_form td {
+  padding: u.rem(12);
+  background-color: #fff;
+
+  @include u.mq("md") {
+    padding: u.rem(20);
+  }
+}
+.bl_contact_form input,
+.bl_contact_form textarea {
+  width: 100%;
+  border-radius: u.rem(5);
+  border: 1px solid #999;
+}
+// 入力時に枠線の色を変える
+.bl_contact_form input:focus-visible,
+.bl_contact_form textarea:focus-visible {
+  outline-color: u.$colorAccent;
+}
+.bl_contact_form textarea {
+  height: u.rem(160);
+}

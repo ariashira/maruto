@@ -55,27 +55,39 @@ $drawerWidth: u.rem(280);
   justify-content: end;
   flex: 0;
 }
+.bl_nav_right {
+  @include u.mq("lg") {
+    width: u.rem(240);
+    flex: 1 0 auto;
+  }
+}
 .bl_nav_itemsWrapper.bl_nav_itemsWrapper__sns {
-  flex-direction: row;
-  flex-basis: u.rem(50);
-  justify-content: space-around;
   align-items: center;
 
   @include u.mq("lg") {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: u.rem(150);
-    justify-content: space-evenly;
-    align-items: center;
+    height: auto;
   }
 }
 .bl_nav_itemsWrapper.bl_nav_itemsWrapper__sns .bl_nav_item {
-  width: u.rem(32);
   height: auto;
+}
+.bl_nav_itemsWrapper.bl_nav_itemsWrapper__sns .bl_nav_item.__twitter {
+  width: u.rem(70);
+  padding: u.rem(10);
   @include u.mq("lg") {
-    width: u.rem(40);
+    width: auto;
+    padding: u.rem(10) 0;
   }
 }
+.bl_nav_itemsWrapper.bl_nav_itemsWrapper__sns .bl_nav_item.__facebook {
+  width: u.rem(62);
+  padding: u.rem(10);
+  @include u.mq("lg") {
+    width: auto;
+    padding: u.rem(10) 0;
+  }
+}
+
 .bl_nav_itemsWrapper.bl_nav_itemsWrapper__sns .bl_nav_link::before {
   content: none;
 }
@@ -113,6 +125,10 @@ $drawerWidth: u.rem(280);
     background-color: u.$colorAccent;
   }
 }
+.bl_nav_item_sitemap .bl_nav_link {
+  padding: u.rem(10);
+}
+
 .bl_nav_link {
   display: inline-block;
   position: relative;
@@ -145,16 +161,21 @@ $drawerWidth: u.rem(280);
     content: none;
   }
 }
-
-.bl_nav_link.bl_nav_link__sns {
+.bl_nav_item_sns_wrapper {
+  display: flex;
+  gap: u.rem(10);
+}
+.bl_nav_link__sns {
   width: 100%;
-  padding-left: 0;
 
   @include u.mq("lg") {
-    width: 100px;
+    width: u.rem(22);
+    padding: u.rem(5) 0;
   }
 }
-
+.bl_nav_item_sitemap {
+  font-size: u.rem(15);
+}
 .bl_nav_link.bl_nav_link__sns > img {
 }
 
@@ -187,4 +208,27 @@ $drawerWidth: u.rem(280);
 // ハンバーガーボタンクリック時の動作
 #hamburger_checkBox:checked ~ .bl_nav_drawerOverlay {
   display: block; // ハンバーガーボタンクリック時に表示
+}
+
+.bl_searchBox_wrapper {
+  padding: u.rem(20);
+
+  @include u.mq("lg") {
+    padding: 0 u.rem(20) 0 u.rem(20);
+  }
+}
+.bl_searchBox {
+  height: u.rem(36);
+  width: u.rem(140);
+  border: 1px solid #999;
+  border-radius: u.rem(2);
+}
+.bl_searchBox_btn {
+  font-size: u.rem(18);
+  line-height: 1;
+  color: #555;
+  border: 1px solid #999;
+  border-radius: u.rem(2);
+  padding: u.rem(7) u.rem(5) u.rem(7) u.rem(25);
+  margin-left: u.rem(5);
 }

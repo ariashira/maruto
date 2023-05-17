@@ -5,7 +5,7 @@
     {
       name: "会社情報",
       en: "Company",
-      url: "#",
+      url: "./page-company.html",
       type: "",
     },
     {
@@ -17,7 +17,7 @@
     {
       name: "お知らせ",
       en: "News",
-      url: "/page-news_list.html",
+      url: "./page-news_list.html",
       type: "",
     },
   ];
@@ -26,13 +26,13 @@
     {
       name: "お問い合わせ",
       en: "Contact",
-      url: "#",
+      url: "./page-contact.html",
       type: "contact", // 色を変えるための情報
     },
     {
       name: "採用情報",
       en: "Recruit",
-      url: "/page-recruit.html",
+      url: "./page-recruit.html",
       type: "recruit", // 色を変えるための情報
     },
   ];
@@ -126,30 +126,40 @@ mixin nav(path = './')
           li.bl_nav_item
             a.bl_nav_link.js_nav_link.bl_underlineAnimation(href=item.url)
               span.bl_nav_link_text #{item.name}
-              span.bl_nav_link_text.bl_nav_link_text__en.lgUp_only #{item.en}
+              span.bl_nav_link_text.bl_nav_link_text__en.lgUp_only.hp_fw__bold #{item.en}
       // CTAのボタン2つ
       ul.bl_nav_itemsWrapper.bl_nav_itemsWrapper__cta
+        // お問い合わせ
         li.bl_nav_item.bl_nav_item__accent
           a.bl_nav_link.js_nav_link(href=navItems2[0].url)
             span.bl_nav_link_text #{navItems2[0].name}
-            span.bl_nav_link_text.bl_nav_link_text__en.lgUp_only #{navItems2[0].en}
+            span.bl_nav_link_text.bl_nav_link_text__en.lgUp_only.hp_fw__bold #{navItems2[0].en}
+        // 採用情報
         li.bl_nav_item.bl_nav_item__theme
           a.bl_nav_link.js_nav_link(href=navItems2[1].url)
             span.bl_nav_link_text #{navItems2[1].name}
-            span.bl_nav_link_text.bl_nav_link_text__en.lgUp_only #{navItems2[1].en}
-      // SNSアイコン2つ
-      ul.bl_nav_itemsWrapper.bl_nav_itemsWrapper__sns
-        li.bl_nav_item
-          a.bl_nav_link.bl_nav_link__sns.js_nav_link(href="#")
-            picture
-              source(media="(min-width: 992px)", srcset=pathImgHeader + "icon_twitter.svg")
-              img(src=pathImgHeader + "icon_twitter__white.svg" alt="twitter")
-        li.bl_nav_item
-          a.bl_nav_link.bl_nav_link__sns.js_nav_link(href="#")
-            picture
-              source(media="(min-width: 992px)", srcset=pathImgHeader + "icon_facebook.svg")
-              img(src=pathImgHeader + "icon_facebook__white.svg" alt="facebook")
-
+            span.bl_nav_link_text.bl_nav_link_text__en.lgUp_only.hp_fw__bold #{navItems2[1].en}
+      // 右端の色々
+      .bl_nav_right
+        // サイトマップとSNSアイコン2つ
+        .bl_nav_itemsWrapper.bl_nav_itemsWrapper__sns
+          .bl_nav_item.bl_nav_item_sitemap
+            a(href="./page-sitemap.html").bl_nav_link.js_nav_link ■サイトマップ
+          ul.bl_nav_item_sns_wrapper
+            li.bl_nav_item.__twitter
+              a.bl_nav_link__sns.js_nav_link(href="https://twitter.com/maruto_1951" target="_blank")
+                picture
+                  source(media="(min-width: 992px)", srcset=pathImgHeader + "icon_twitter.svg")
+                  img(src=pathImgHeader + "icon_twitter__white.svg" alt="twitter")
+            li.bl_nav_item.__facebook
+              a.bl_nav_link__sns.js_nav_link(href="#" target="_blank")
+                picture
+                  source(media="(min-width: 992px)", srcset=pathImgHeader + "icon_facebook.svg")
+                  img(src=pathImgHeader + "icon_facebook__white.svg" alt="facebook")
+        .bl_searchBox_wrapper
+          form
+            input(type="search" name="search").bl_searchBox
+            input(type="submit" name="submit" value="検索").bl_searchBox_btn
 
 //- **************************************
 //- セクション見出し
